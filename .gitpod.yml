@@ -1,3 +1,16 @@
 tasks:
-  - init: yarn install && yarn build
-    command: cd site && yarn dev
+  - name: Terminal 1
+    init: docker-compose up -d
+    command: cd vendure && yarn dev
+  - name: Terminal 2
+    init: pnpm install && pnpm build
+    command: cd site && pnpm dev
+ports:
+  - port: 3001
+    onOpen: open-preview
+vscode:
+  extensions:
+    - ms-vscode.vscode-typescript-next
+    - bradlc.vscode-tailwindcss
+    - csstools.postcss
+    - esbenp.prettier-vscode

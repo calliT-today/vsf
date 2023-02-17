@@ -30,18 +30,8 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
-          <div className="col-span-1 lg:col-span-2">
-            <Link
-              href="/"
-              className="flex flex-initial items-center font-bold md:mr-24"
-            >
-              <span className="rounded-full border border-accent-6 mr-2">
-                <Logo />
-              </span>
-              <span>ACME</span>
-            </Link>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 text-primary bg-primary transition-colors duration-150">
+          <div className="col-span-1 lg:col-span-2">#buildinpublic</div>
           <div className="col-span-1 lg:col-span-7">
             <div className="grid md:grid-rows-4 md:grid-cols-3 md:grid-flow-col">
               {[...links, ...sitePages].map((page) => (
@@ -63,7 +53,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               <a
                 className={s.link}
                 aria-label="Github Repository"
-                href="https://github.com/vercel/commerce"
+                href="https://github.com/calliT-today/vsf"
               >
                 <Github />
               </a>
@@ -72,22 +62,16 @@ const Footer: FC<Props> = ({ className, pages }) => {
         </div>
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <span></span>
           </div>
           <div className="flex items-center text-primary text-sm">
-            <span className="text-primary">Created by</span>
-            <a
-              rel="noopener noreferrer"
-              href="https://vercel.com"
-              aria-label="Vercel.com Link"
-              target="_blank"
-              className="text-primary"
+            <span className="text-primary">made with &#9825; at &nbsp;</span>
+            <Link
+              href="https://calliT.today"
+              className="text-accent-9 hover:text-accent-6 transition ease-in-out duration-150"
             >
-              <Vercel
-                className="inline-block h-6 ml-3 text-primary"
-                alt="Vercel.com Logo"
-              />
-            </a>
+              calliT.today
+            </Link>
           </div>
         </div>
       </Container>
